@@ -1,32 +1,32 @@
 <?php
 
 //koneksi saat tersambung ke database hosting
-// if (!defined('DB_HOST')) {
-// 	define('DB_HOST', '');
-// }
-// if (!defined('DB_USER')) {
-// 	define('DB_USER', 'u439770411_skldaarul');
-// }
-// if (!defined('DB_PASS')) {
-// 	define('DB_PASS', '02141360470Iqbal.');
-// }
-// if (!defined('DB_NAME')) {
-// 	define('DB_NAME', 'u439770411_skldaarul');
-// }
-
-//koneksi saat tersambung ke database lokal
 if (!defined('DB_HOST')) {
-	define('DB_HOST', 'localhost');
+	define('DB_HOST', '');
 }
 if (!defined('DB_USER')) {
-	define('DB_USER', 'root');
+	define('DB_USER', 'u439770411_skldaarul');
 }
 if (!defined('DB_PASS')) {
-	define('DB_PASS', '');
+	define('DB_PASS', '02141360470Iqbal.');
 }
 if (!defined('DB_NAME')) {
-	define('DB_NAME', 'daarulhikmah_skl');
+	define('DB_NAME', 'u439770411_skldaarul');
 }
+
+//koneksi saat tersambung ke database lokal
+// if (!defined('DB_HOST')) {
+// 	define('DB_HOST', 'localhost');
+// }
+// if (!defined('DB_USER')) {
+// 	define('DB_USER', 'root');
+// }
+// if (!defined('DB_PASS')) {
+// 	define('DB_PASS', '');
+// }
+// if (!defined('DB_NAME')) {
+// 	define('DB_NAME', 'daarulhikmah_skl');
+// }
 
 
 $db_conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
