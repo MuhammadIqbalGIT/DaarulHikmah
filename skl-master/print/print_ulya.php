@@ -71,8 +71,6 @@ if (isset($_SESSION['logged']) && !empty($_SESSION['logged'])) {
     ul {
         margin-bottom: 0in;
     }
-
-    
     </style>
 </head>
 <button id="printButton" onclick="printPage()"
@@ -86,10 +84,11 @@ function printPage() {
     window.print();
     setTimeout(() => {
         document.getElementById("printButton").style.display =
-        "block"; // Tampilkan kembali setelah cetak selesai
+            "block"; // Tampilkan kembali setelah cetak selesai
     }, 1000);
 }
 </script>
+
 <body>
 
     <?php
@@ -131,20 +130,21 @@ function printPage() {
                             <center><img width=693 height=117 src="../img/<?= $hsl["kop"] ?>"></center>
 
                             <center>
-                                <b>SURAT KETERANGAN KELULUSAN</b> <br>
-                                Nomor : <?= $no_surat; ?> <br>
+                                <b><u>SURAT KETERANGAN LULUS</u></b><br>
+                                Tahun Ajaran 2024/2025<br>
+                                Nomor : <?= $no_surat; ?>
                             </center>
                             <p>
                                 Yang bertanda tangan di bawah ini Kepala Pendidikan Kesetaraan Pondok Pesantren
                                 Salafiyah <b>Tahfizh Al Quran Daarul Hikmah</b> Tingkat Ulya dengan Nomor Pokok Sekolah
-                                Nasional <b>70008473</b> Kabupaten Tangerang Selatan Provinsi Banten, menerangkan bahwa
+                                Nasional <b>70008473</b> Kota Tangerang Selatan Provinsi Banten, menerangkan bahwa
                                 :
                             </p>
                             Menerangkan bahwa:
 
                             <table cellspacing="0" cellpadding="1" border="0">
                                 <tr>
-                                    <td>Nama </td>
+                                    <td>Nama Peserta</td>
                                     <td>&nbsp; :&nbsp;&nbsp;</td>
                                     <td> <?= $nama; ?> </td>
                                 </tr>
@@ -186,109 +186,113 @@ function printPage() {
                                     <td style='font-weight: bold;'><?= $status; ?> </td>
                                 </tr>
                             </table>
-                            Dengan nilai sebagai berikut:
-                            <br><br>
-                            <center>
-                                <table border="1" cellpadding="2" cellspacing="0">
 
-                                    <thead align="center" bgcolor="#DEEAF6">
-                                        <td width="47" height="30">
-                                            <strong>No.</strong>
+                            <br>
+                            dari Pendidikan Kesetaraan Pondok Pesantren Salafiyah Tingkat Ulya setelah memenuhi seluruh
+                            kriteria sesuai dengan perundang-undangan.
+                            <br>
+
+
+                            <table border="1" cellpadding="2" cellspacing="0" style="margin-left: 0;" width="100%">
+
+                                <thead align="center" bgcolor="#DEEAF6">
+                                    <td width="47" height="30">
+                                        <strong>No.</strong>
+                                    </td>
+                                    <td width="454">
+                                        <strong>Mata Pelajaran</strong>
+                                    </td>
+                                    <td width="123">
+                                        <strong>Nilai Akhir</strong>
+                                    </td>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td align="center"> 1.</td>
+                                        <td> AL-QUR'AN </td>
+                                        <td align="center"><?= $n_alquran; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center"> 2.</td>
+                                        <td> HADITS </td>
+                                        <td align="center"><?= $n_hadits; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center"> 3.</td>
+                                        <td> AQIDAH </td>
+                                        <td align="center"><?= $n_aqidah; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center"> 4.</td>
+                                        <td> AKHLAQ </td>
+                                        <td align="center"><?= $n_akhlaq; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center"> 5.</td>
+                                        <td> FIQIH </td>
+                                        <td align="center"><?= $n_fiqih; ?></td>
+                                    </tr>
+                                    <tr>
+                                    <tr>
+                                        <td align="center"> 6.</td>
+                                        <td> TARIKH/SEJARAH PERADABAN ISLAM </td>
+                                        <td align="center"><?= $n_tarikh_sejarah_peradaban_islam; ?></td>
+                                    </tr>
+                                    <tr>
+                                    <tr>
+                                        <td align="center"> 7.</td>
+                                        <td> BAHASA ARAB </td>
+                                        <td align="center"><?= $n_bahasa_arab; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center"> 8.</td>
+                                        <td> PPKN </td>
+                                        <td align="center"><?= $n_ppkn; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center"> 9.</td>
+                                        <td> SEJARAH INDONESIA </td>
+                                        <td align="center"><?= $n_sejarah_indonesia; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center"> 10.</td>
+                                        <td> MATEMATIKA </td>
+                                        <td align="center"><?= $n_matematika; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center"> 11.</td>
+                                        <td> BAHASA INDONESIA </td>
+                                        <td align="center"><?= $n_bahasa_indonesia; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center"> 12.</td>
+                                        <td> BAHASA INGGRIS </td>
+                                        <td align="center"><?= $n_bahasa_inggris; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center"> 13.</td>
+                                        <td> EKONOMI </td>
+                                        <td align="center"><?= $n_ekonomi; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center"> 14.</td>
+                                        <td> GEOGRAFI </td>
+                                        <td align="center"><?= $n_geografi; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center"> 15.</td>
+                                        <td> SOSIOLOGI </td>
+                                        <td align="center"><?= $n_sosiologi; ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" align="center" bgcolor="#DEEAF6">
+                                            <strong>Rata-rata</strong>
                                         </td>
-                                        <td width="454">
-                                            <strong>Mata Pelajaran</strong>
-                                        </td>
-                                        <td width="123">
-                                            <strong>Nilai Akhir</strong>
-                                        </td>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td align="center"> 1.</td>
-                                            <td> AL-QUR'AN </td>
-                                            <td align="center"><?= $n_alquran; ?></td>
-                                        </tr>
-                                        <tr>
-                                            <td align="center"> 2.</td>
-                                            <td> HADITS </td>
-                                            <td align="center"><?= $n_hadits; ?></td>
-                                        </tr>
-                                        <tr>
-                                            <td align="center"> 3.</td>
-                                            <td> AQIDAH </td>
-                                            <td align="center"><?= $n_aqidah; ?></td>
-                                        </tr>
-                                        <tr>
-                                            <td align="center"> 4.</td>
-                                            <td> AKHLAQ </td>
-                                            <td align="center"><?= $n_akhlaq; ?></td>
-                                        </tr>
-                                        <tr>
-                                            <td align="center"> 5.</td>
-                                            <td> FIQIH </td>
-                                            <td align="center"><?= $n_fiqih; ?></td>
-                                        </tr>
-                                        <tr>
-                                        <tr>
-                                            <td align="center"> 6.</td>
-                                            <td> TARIKH/SEJARAH PERADABAN ISLAM </td>
-                                            <td align="center"><?= $n_tarikh_sejarah_peradaban_islam; ?></td>
-                                        </tr>
-                                        <tr>
-                                        <tr>
-                                            <td align="center"> 7.</td>
-                                            <td> BAHASA ARAB </td>
-                                            <td align="center"><?= $n_bahasa_arab; ?></td>
-                                        </tr>
-                                        <tr>
-                                            <td align="center"> 8.</td>
-                                            <td> PPKN </td>
-                                            <td align="center"><?= $n_ppkn; ?></td>
-                                        </tr>
-                                        <tr>
-                                            <td align="center"> 9.</td>
-                                            <td> SEJARAH INDONESIA </td>
-                                            <td align="center"><?= $n_sejarah_indonesia; ?></td>
-                                        </tr>
-                                        <tr>
-                                            <td align="center"> 10.</td>
-                                            <td> MATEMATIKA </td>
-                                            <td align="center"><?= $n_matematika; ?></td>
-                                        </tr>
-                                        <tr>
-                                            <td align="center"> 11.</td>
-                                            <td> BAHASA INDONESIA </td>
-                                            <td align="center"><?= $n_bahasa_indonesia; ?></td>
-                                        </tr>
-                                        <tr>
-                                            <td align="center"> 12.</td>
-                                            <td> BAHASA INGGRIS </td>
-                                            <td align="center"><?= $n_bahasa_inggris; ?></td>
-                                        </tr>
-                                        <tr>
-                                            <td align="center"> 13.</td>
-                                            <td> EKONOMI </td>
-                                            <td align="center"><?= $n_ekonomi; ?></td>
-                                        </tr>
-                                        <tr>
-                                            <td align="center"> 14.</td>
-                                            <td> GEOGRAFI </td>
-                                            <td align="center"><?= $n_geografi; ?></td>
-                                        </tr>
-                                        <tr>
-                                            <td align="center"> 15.</td>
-                                            <td> SOSIOLOGI </td>
-                                            <td align="center"><?= $n_sosiologi; ?></td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="2" align="center" bgcolor="#DEEAF6">
-                                                <strong>Rata-rata</strong>
-                                            </td>
-                                            <td align="center"><?= $rata2; ?></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </center>
+                                        <td align="center"><?= $rata2; ?></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
                             <?php
                                             // berikut adalah parameter qr code
                                             $teks_qrcode = "SKL: " . $no_surat . ", " . $nama . ", " . $no_ujian . ", " . $nis . ", " . $nisn . ", " . $status;
@@ -300,23 +304,28 @@ function printPage() {
                                             // qrcode berakhir
                                             ?>
 
-                            <table class="cap">
+                            <p style="text-align: justify; margin: 0;">
+                                Surat Keterangan ini dapat dipergunakan untuk keperluan Penerimaan Peserta Didik Baru
+                                atau
+                                keperluan lainnya.
+                            </p>
+
+                            <table class="cap" style="width: 100%;">
                                 <tr>
-                                    <td width="65%">
-                                        <img style="margin-left:0.4in; width: 110px; height: 110px"
+                                    <td style="width: 50%;">
+                                        <img style="margin-left: 0.4in; width: 110px; height: 110px"
                                             src="../qrcode-img/<?= $namafile; ?>">
                                     </td>
-                                    <td width="25%" valign="top">
-                                        Tangerang Selatan, <?= $tgl_skl; ?> <br> Kepala Sekolah,
-                                        <img style="width: 129px; height: 67px" src="../img/<?= $hsl['ttd'] ?>">
-                                        <br>
+                                    <td
+                                        style="width: 50%; text-align: right; vertical-align: top; padding-bottom: 30px;">
+                                        <div style="line-height: 1.6;">
+                                            Tangerang Selatan, <?= $tgl_skl; ?> <br><br>
 
-                                        <u>
-                                            <b><?= $kepsek; ?></b>
-                                        </u>
-                                        <br>
-                                        NIP. <?= $nip; ?>
+                                            <b><?= $kepsek; ?></b><br>
+                                            NIP. <?= $nip; ?>
+                                        </div>
                                     </td>
+
                                 </tr>
                             </table>
                         </div>
